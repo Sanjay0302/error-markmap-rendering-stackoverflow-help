@@ -1,16 +1,18 @@
+/* custom css */
+
 .markmap-container {
-    width: 100%;
-    border: 1px solid #aaaaaa !important;
-    border-radius: 15px;
-    overflow: hidden;
-    margin: 20px 0;
-    padding: 10px; /* Add some padding to prevent content from touching the border */
-  }
-  
-  .markmap {
-    width: 100%;
-    height: auto;
-    min-height: 30 0px;
-    display: block;
-  }
-  
+  width: 100%;
+  border: 1px solid #aaaaaa !important;
+  border-radius: 15px;
+  overflow: hidden;
+  margin: 20px 0;
+  padding: 10px;
+}
+
+.markmap {
+  width: 100%;
+  height: auto;
+  min-height: 300px;
+  display: block;
+}
+
