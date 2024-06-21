@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="description" content="Description">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
+  <!-- <link rel="stylesheet" href="./styles.css">    -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.17.0/dist/style.css">
+  <style>
+    .markmap-container {
+      width: 100%;
+      border: 1px solid #aaaaaa !important;
+      border-radius: 15px;
+      overflow: hidden;
+      margin: 20px 0;
+      padding: 10px;
+    }
+
+    .markmap {
+      width: 100%;
+      height: auto;
+      min-height: 300px;
+      display: block;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="app"></div>
+  <script>
+    window.$docsify = {
+      name: 'sajaybyranna',
+      repo: '',
+      hideSidebar: true,
+
+    }
+  </script>
+  <!-- Docsify v4 -->
+  <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
+  <script src="./docsify-markmap.min.js"></script>
+  <script src="./markmap-autoloader@0.15.2"></script>
+  <script src="https://cdn.jsdelivr.net/npm/d3@7.8.5/dist/d3.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/markmap-view@0.17.0/dist/browser/index.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.17.0/dist/index.js"></script>
+  <script>
+      (() => {
+        setTimeout(() => {
+          const { markmap: O, mm: h } = window;
+          const M = new O.Toolbar();
+          M.attach(h);
+          const re = M.render();
+          re.setAttribute("style", "position:absolute;bottom:20px;right:20px");
+          document.body.append(re);
+        });
+      })()
+  </script>
+  <script>
+    window.markmap = {
+      autoLoader: { manual: true, toolbar: true },
+    };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/markmap-autoloader"></script>
+  <script>
+    // Render in 5s
+    setTimeout(() => {
+      markmap.autoLoader.renderAll();
+    }, 5000);
+  </script>
+</body>
+
+</html>
